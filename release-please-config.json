@@ -1,0 +1,9 @@
+{
+    "packages": {
+        ".": {
+            "include-component-in-tag": false,
+            "package-name": "github.com/mikesmitty/tinypid",
+            "release-type": "go"
+        }
+    }
+}
