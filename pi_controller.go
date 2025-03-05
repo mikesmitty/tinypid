@@ -16,6 +16,14 @@ type PIControllerConfig struct {
 	ProportionalGain float32
 	// IntegralGain determines previous error's affect on output.
 	IntegralGain float32
+	// MaxIntegralError is the maximum value of the integral error.
+	MaxIntegralError float32
+	// MinIntegralError is the minimum value of the integral error.
+	MinIntegralError float32
+	// MaxOutput is the max output from the PID.
+	MaxOutput float32
+	// MinOutput is the min output from the PID.
+	MinOutput float32
 }
 
 // PIControllerState holds mutable state for a Controller.
@@ -39,7 +47,8 @@ type PIControllerInput struct {
 // Update the controller state.
 func (c *PIController) Update(input ControllerInput) {
 	controlError := input.ReferenceSignal - input.ActualSignal
-	c.State.ControlErrorIntegral += controlError * seconds(input.SamplingInterval)
+	c.State.ControlErrorIntegral = max(c.Config.MinIntegralError,
+		min(c.Config.MaxIntegralError, c.State.ControlErrorIntegral+controlError*seconds(input.SamplingInterval)))
 	c.State.ControlSignal = c.Config.ProportionalGain*controlError +
 		c.Config.IntegralGain*c.State.ControlErrorIntegral
 }
