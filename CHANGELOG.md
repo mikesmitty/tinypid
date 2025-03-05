@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/mikesmitty/tinypid/compare/v1.0.0...v1.1.0) (2025-03-05)
+
+
+### Features
+
+* add output and integral windup limits to PI controller ([976ef67](https://github.com/mikesmitty/tinypid/commit/976ef67e4c059ab44ac2a2feb76263985f68e56c))
+
 ## 1.0.0 (2025-03-05)
 
 
