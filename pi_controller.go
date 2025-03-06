@@ -45,7 +45,7 @@ type PIControllerInput struct {
 }
 
 // Update the controller state.
-func (c *PIController) Update(input ControllerInput) {
+func (c *PIController) Update(input PIControllerInput) {
 	controlError := input.ReferenceSignal - input.ActualSignal
 	c.State.ControlErrorIntegral = max(c.Config.MinIntegralError,
 		min(c.Config.MaxIntegralError, c.State.ControlErrorIntegral+controlError*seconds(input.SamplingInterval)))
