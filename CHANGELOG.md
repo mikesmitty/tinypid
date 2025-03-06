@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/mikesmitty/tinypid/compare/v1.1.0...v1.1.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* update controller input struct for consistency ([2d68e84](https://github.com/mikesmitty/tinypid/commit/2d68e84d5557dc53c8ec97e13051aaf548629823))
+
 ## [1.1.0](https://github.com/mikesmitty/tinypid/compare/v1.0.0...v1.1.0) (2025-03-05)
 
 
