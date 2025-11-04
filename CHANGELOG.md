@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/mikesmitty/tinypid/compare/v1.1.1...v1.1.2) (2025-11-04)
+
+
+### Bug Fixes
+
+* Update module gotest.tools/v3 to v3.5.2 ([#5](https://github.com/mikesmitty/tinypid/issues/5)) ([f5afc9f](https://github.com/mikesmitty/tinypid/commit/f5afc9f4e1cc196541442461aaa2aaf5bce45125))
+
 ## [1.1.1](https://github.com/mikesmitty/tinypid/compare/v1.1.0...v1.1.1) (2025-03-06)
 
 
